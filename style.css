@@ -1,0 +1,21 @@
+body{
+    margin: 0 auto;
+    padding: 10px;
+    height: 95vh;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    background-color: #2b2b2b;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+#snake{
+    border: 15px solid grey;
+}

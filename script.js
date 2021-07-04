@@ -14,8 +14,10 @@ let food = {
     y: Math.floor(Math.random() * 15 + 1) * box
 }
 
+let score = 0;
+
 function createBackground() {
-    context.fillStyle = 'lightgreen';
+    context.fillStyle = '#2b2b2b';
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
@@ -47,9 +49,10 @@ function startGame() {
     if (snake[0].y < 0 && direction == 'up') snake[0].y = 16 * box;
 
     for (i = 1; i < snake.length; i++) {
+        score = (snake.length - 1);
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
             clearInterval(game);
-            alert("Game Over!");
+            confirm("Game Over!\nScore: " + score);
         }
     }
 
