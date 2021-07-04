@@ -10,12 +10,12 @@ snake[0] = {
 
 let direction = 'right';
 
-function criarBackground() {
+function createBackground() {
     context.fillStyle = 'lightgreen';
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
-function criarSnake() {
+function createSnake() {
     for (i = 0; i < snake.length; i++) {
         context.fillStyle = 'green';
         context.fillRect(snake[i].x, snake[i].y, box, box);
@@ -23,8 +23,8 @@ function criarSnake() {
 }
 
 function startGame() {
-    criarBackground();
-    criarSnake();
+    createBackground();
+    createSnake();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
